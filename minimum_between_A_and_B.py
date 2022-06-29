@@ -1,11 +1,14 @@
 n=int(input())
-l=list(map(int,input().split()))
-a,b=map(int,input().split())
-k=[]
-for i in range(n):
-    if l[i]>=a and l[i]<=b:
-        k.append(l[i])
-if len(k)>0:
-    print(min(k))
+a=list(map(int,input().split()))
+b,c=map(int,input().split())
+s=[]
+for i in range(b,c+1):
+    s.append(i)
+d=[]
+for j in a:
+    if j in s:
+        d.append(j)
+if len(d)>0:
+    print(min(d))
 else:
-    print(-1)
+    print('-1')
