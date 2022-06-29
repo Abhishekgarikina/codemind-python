@@ -1,5 +1,8 @@
 n=int(input())
-arr=list(map(int,input().strip().split()))
+a=list(map(int,input().split()))
+s=[]
 if n%2!=0:
-    arr.append(0)
-print(*arr)    
+    a.append(0)
+    print(*a)
+else:
+    print(*a)
