@@ -1,8 +1,14 @@
 n=int(input())
-arr=list(map(int,input().strip().split()))
-a,b=map(int,input().split())
-sum=0
-for i in range(0,n):
-    if arr[i]<a or arr[i]>b:
-        sum=sum+arr[i]
-print(sum)
+a=list(map(int,input().split()))
+b,c=map(int,input().split())
+s=[]
+p=[]
+for i in range(b,c+1):
+    s.append(i)
+for j in a:
+    if j not in s:
+        p.append(j)
+s=0
+for k in p:
+    s=s+k
+print(s)
