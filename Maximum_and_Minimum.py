@@ -1,19 +1,14 @@
-n=int(input())
-arr=list(map(int,input().strip().split()))
-k=[]
-sum=0
+n=list(input())
+a=list(map(int,input().split()))
+k=set(a)
+d=list(k)
 c=0
-for i in range(n):
-    if arr[i]!=-1:
-        c=1
-        for j in range(n):
-            if arr[i]==arr[j] and i!=j:
-                c=c+1
-                arr[j]=-1
-        if arr[i]==c:
-            k.append(arr[i])
-if len(k)==0:
-    print(-1)
+s=[]
+for i in d:
+    if a.count(i)==i:
+        c=c+1
+        s.append(i)
+if c>=1:
+    print(min(s),max(s))
 else:
-    
-    print(min(k),max(k))
+    print("-1")
