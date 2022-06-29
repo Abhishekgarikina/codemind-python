@@ -1,5 +1,7 @@
-n=input()
-s=n.split()
-l=len(s)
-for i in range(l-1,-1,-1):
-    print(s[i],end=" ")
+a=str(input())
+b=a.split()
+c=[]
+d=[]
+for i in range(len(b)):
+    c.append(b[i])
+print(*(c[::-1]))
