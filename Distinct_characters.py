@@ -1,13 +1,15 @@
-n=input()
-p=n.lower()
-k=[]
-t=[]
-a='abcdefghijklmnopqrstuvwxyz'
-for i in p:
-    if p.count(i)==1:
-        k.append(i)
-for i in a:
-    if i in k:
-        t.append(i)
-m=''.join(t)
-print(m)
+a=str(input())
+b=a.lower()
+c=list(b)
+d=[]
+f=[]
+e='abcdefghijklmnopqrstuvwxyz'
+for i in c:
+    if i!=' ':
+        if i not in d:
+            d.append(i)
+for i in e:
+    if i in d:
+        f.append(i)
+g=''.join(f)
+print(g)
