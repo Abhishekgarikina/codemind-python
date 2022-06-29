@@ -1,11 +1,9 @@
-n=int(input())
-arr=list(map(int,input().strip().split()))
-k=[]
-sum=0
-for i in range(n):
-    if arr[i]%2==0:
-        if arr[i] not in k:
-            k.append(arr[i])
-for i in range(len(k)):
-    sum=sum+k[i]
-print(sum)    
+n=list(input())
+a=list(map(int,input().split()))
+k=set(a)
+d=list(k)
+s=0
+for i in d:
+    if i%2==0:
+        s=s+i
+print(s)
