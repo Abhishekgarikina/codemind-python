@@ -1,10 +1,14 @@
 n=int(input())
-arr=list(map(int,input().strip().split()))
-a,b=map(int,input().split())
-c=0
-for i in range(0,n):
-    if arr[i]<a or arr[i]>b:
-        c=c+1
-        print(arr[i],end=" ")
-if c==0:
-    print(-1)
+a=list(map(int,input().split()))
+b,c=map(int,input().split())
+s=[]
+p=[]
+for i in range(b,c+1):
+    s.append(i)
+for j in a:
+    if j not in s:
+        p.append(j)
+if len(p)>0:
+    print(*p)
+else:
+    print('-1')
