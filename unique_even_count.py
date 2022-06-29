@@ -1,8 +1,9 @@
-n=int(input())
-arr=list(map(int,input().strip().split()))
-k=[]
-for i in range(n):
-    if arr[i]%2==0:
-        if arr[i] not in k:
-            k.append(arr[i])
-print(len(k))
+n=list(input())
+a=list(map(int,input().split()))
+k=set(a)
+d=list(k)
+s=0
+for i in d:
+    if i%2==0:
+        s=s+1
+print(s)
