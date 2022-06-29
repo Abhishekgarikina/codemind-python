@@ -1,25 +1,14 @@
-n=int(input())
-arr=list(map(int,input().strip().split()))
-k=[]
-sum=0
+n=list(input())
+a=list(map(int,input().split()))
+k=set(a)
 c=0
-for i in range(n):
-    if arr[i]!=-1:
-        c=1
-        for j in range(n):
-            if arr[i]==arr[j] and i!=j:
-                c=c+1
-                arr[j]=-1
-        if arr[i]==c:
-            k.append(arr[i])
-for i in range(len(k)):
-    sum=sum+k[i]
-if len(k)==0:
-    print(-1)   
+s=0
+for i in k:
+    if a.count(i)==i:
+        c=c+1
+        s=s+i
+if c>=1:
+    k=s/c
+    print('{:.2f}'.format(k))
 else:
-    avg=sum/len(k)
-    print("{:.2f}".format(avg))
-
-          
-            
-            
+    print("-1")
