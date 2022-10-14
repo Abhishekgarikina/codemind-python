@@ -1,5 +1,7 @@
-n=int(input())
-for i in range(n+1,1,-1):
-    for j in range(n,1,-1):
-        print(j,end=' ')
-    print('1 ')
+a=int(input())
+for i in range(a):
+    for j in range(1,a-1):
+        print(j,end="")
+    for j in range(1,a-2):
+        print(j,end="")
+    print()
