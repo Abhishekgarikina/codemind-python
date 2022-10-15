@@ -1,11 +1,9 @@
-n=input()
-n1=n.lower()
-s=n1.split()
+s=list(map(str,input().split()))
 c=0
 for i in s:
-    k=i
-    p=i[::-1]
-    if k==p:
-        c=c+1
-print(c)        
-    
+    m=i.lower()
+    n=m[::-1]
+    if m==n:
+        c+=1
+
+print(c)
