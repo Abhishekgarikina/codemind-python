@@ -1,17 +1,6 @@
-m,n=map(int,input().split())
-a=[]
+x , y = map(int,input().split())
 s=0
-for i in range(m):
-    l=list(map(int,input().split()))
-    if len(l)==n:
-        a.append(l)
-for i in range(m):
-    for j in range(n):
-        s=s+a[i][j]
-print(s)        
-            
-            
-        
-        
-        
-        
+for i in range(x):
+    l = list(map(int,input().split()))
+    s += sum(l)
+print(s)
