@@ -1,9 +1,20 @@
-n=int(input())
-a=list(map(int,input().split()))
+def palin(n):
+    a=n
+    s=0
+    if n<0:
+        n=n*-1
+    while n!=0:
+        i = n%10
+        s = s*10+i
+        n = n//10
+    if a==s:
+        return 1
+    else:
+        return 0
+x = int(input())
+l = list(map(int,input().split()))
 c=0
-for i in range(n):
-    p=str(a[i])
-    k=p[::-1]
-    if p==str(k):
-        c=c+1
-print(c)        
+for i in l:
+    if palin(i):
+        c+=1
+print(c)
