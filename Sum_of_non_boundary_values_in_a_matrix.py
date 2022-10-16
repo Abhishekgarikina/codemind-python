@@ -1,12 +1,11 @@
-m,n=map(int,input().split())
-k=[]
+a,b=map(int,input().split())
 s=0
-for i in range(m):
+m=[]
+for i in range(a):
     l=list(map(int,input().split()))
-    if len(l)==n:
-        k.append(l)
-for i in range(1,m-1):
-    for j in range(1,n-1):
-        s=s+k[i][j]
-print(s)        
-        
+    m.append(l)
+for i in range(a):
+    for j in range(b):
+        if (i!=0 and i!=a-1) and (j!=0 and j!=b-1):
+            s+=m[i][j]
+print(s)
