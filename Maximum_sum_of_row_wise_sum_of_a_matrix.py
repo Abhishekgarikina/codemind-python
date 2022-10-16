@@ -1,16 +1,13 @@
-m,n=map(int,input().split())
-a=[]
-s=0
-max=0
-for i in range(m):
-    l=list(map(int,input().split()))
-    if len(l)==n:
-        a.append(l)
-for i in range(m):
-    for j in range(n):
-        s=s+a[i][j]
-    if max<s:
-        max=s
+a,b=map(int,input().split())
+m=[]
+n=[]
+l=[]
+for i in range(a):
+    u=list(map(int,input().split()))
+    m.append(u)
+for i in range(a):
     s=0
-print(max)    
-        
+    for j in range(b):
+        s+=m[i][j]
+    l.append(s)
+print(max(l))
