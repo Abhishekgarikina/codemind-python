@@ -1,11 +1,11 @@
-n=int(input())
-l=list(map(int,input().split()))
+x = int(input())
+l = list(map(int,input().split()))
 a,b=map(int,input().split())
 k=[]
-for i in range(n):
+for i in range(x):
     if l[i]>=a and l[i]<=b:
         k.append(l[i])
-if len(k)>0:
-    print(max(k))
+if k==[]:
+    print('-1')
 else:
-    print(-1)
+    print(max(k))
