@@ -1,14 +1,21 @@
-def rev(n):
-    p=0
-    while(n):
-        r=n%10
-        n=n//10
-        p=p*10+r
-    return p
-n=int(input())    
-arr=list(map(int,input().strip().split()))
-t=[]
-for i  in range(n):
-    t.append(rev(arr[i]))
-for i in range(n):
-    print(t[i],end=" ")
+x = int(input())
+l = list(map(int,input().split()))
+for i in l:
+    if i<0:
+        i = i*-1
+        s=0
+        while i!=0:
+            n = i%10
+            s = s*10+n
+            i//=10
+        print('-',end="")
+        print(s,end=" ")
+        s=0
+    else:
+        s=0
+        while i!=0:
+            n = i%10
+            s = s*10+n
+            i//=10
+        print(s,end=" ")
+        s=0
