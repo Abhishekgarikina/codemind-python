@@ -1,7 +1,7 @@
-n,k=map(int,input().split())
+x,y = map(int,input().split())
+l = list(map(int,input().split()))
 c=0
-a=list(map(int,input().split()))
-for i in range(n):
-    if a[i]%k!=0:
-        c=c+1
-print(c)        
+for i in l:
+    if i%y!=0:
+        c+=1
+print(c)
