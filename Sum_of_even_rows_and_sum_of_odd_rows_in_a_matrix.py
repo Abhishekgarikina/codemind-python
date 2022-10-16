@@ -1,20 +1,12 @@
-m,n=map(int,input().split())
-a=[]
-e=0
-o=0
-for i in range(m):
-    l=list(map(int,input().split()))
-    if len(l)==n:
-        a.append(l)
-for i in range(m):
-    for j in range(n):
-        if i%2==0:
-            e=e+a[i][j]
-        else:
-            o=o+a[i][j]
-print(e,o)            
-            
-        
-        
-        
-        
+x , y = map(int,input().split())
+s=0
+c=0
+for i in range(x):
+    if i%2==0:
+        l = list(map(int,input().split()))
+        s += sum(l)
+    else:
+        l = list(map(int,input().split()))
+        c += sum(l)
+print(s,end=" ")
+print(c)
